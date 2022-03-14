@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const PdfViewPage(
-                          searchText: 'jornal',
+                          searchText: 'Marcelino',
                           pdfLink:
                               'https://appro.riodasostras.rj.gov.br/storage/riodasostrasapp/jornais/2022/3/dc5dc863-5649-47ac-a4ab-3b2f2a692ef6.pdf',
                           openToPage: 2),
