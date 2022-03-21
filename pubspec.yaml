@@ -11,11 +11,17 @@ dependencies:
     sdk: flutter
   #syncfusion_flutter_pdfviewer:
    # path: ../flutter_pdf/flutter_pdfviewer
-  syncfusion_flutter_pdfviewer: ^19.4.55-beta 
-
+  syncfusion_flutter_pdfviewer: ^19.4.56-beta 
+  pdftron_flutter: ^1.0.0-beta.8
+  permission_handler: ^8.1.1
+  pspdfkit_flutter: ^3.2.1
+  http: ^0.13.4
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-flutter: 
+flutter:
+  assets:
+   - assets/PDFs/
   uses-material-design: true

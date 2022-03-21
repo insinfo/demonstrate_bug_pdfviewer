@@ -1,5 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:demonstrate_bug_pdfviewer/pdftron.dart';
+import 'package:demonstrate_bug_pdfviewer/pspdfkit.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
@@ -29,6 +31,60 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(
+            height: 50,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SyncfusionPage(),
+                ),
+              );
+            },
+            child: Text('Syncfusion'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PdfTronPage(),
+                ),
+              );
+            },
+            child: Text('PdfTron'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PspdfkitPage(),
+                ),
+              );
+            },
+            child: Text('Pspdfkit'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SyncfusionPage extends StatefulWidget {
+  @override
+  State<SyncfusionPage> createState() => _SyncfusionPageState();
+}
+
+class _SyncfusionPageState extends State<SyncfusionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

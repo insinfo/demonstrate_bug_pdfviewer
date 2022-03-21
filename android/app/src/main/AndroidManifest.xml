@@ -1,8 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.demonstrate_bug_pdfviewer">
+
+ 	<uses-permission android:name="android.permission.INTERNET" />
+     <!-- Required to read and write documents from device storage -->
+ 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+     <!-- Required if you want to record audio annotations -->
+ 	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+
    <application
-        android:label="demonstrate_bug_pdfviewer"
-        android:name="${applicationName}"
+        android:label="demonstrate_bug_pdfviewer"    
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
@@ -11,7 +17,14 @@
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize"
+            android:largeHeap="true"
+        	android:usesCleartextTraffic="true"
+            >
+             <!-- Add license key in meta-data tag here. This should be inside the application tag. -->
+            <meta-data
+                android:name="pdftron_license_key"
+                android:value="${pdftronLicenseKey}"/>
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues
